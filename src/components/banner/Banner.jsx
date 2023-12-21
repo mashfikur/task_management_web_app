@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import cover from "../../assets/images/web-banner.svg";
 import { motion } from "framer-motion";
 
@@ -11,13 +12,15 @@ const Banner = () => {
           transition={{ duration: 0.5 }}
         >
           <div className="flex flex-col items-center lg:items-start">
-            <h3 className=" text-4xl text-center lg:text-start lg:text-7xl text-white leading-snug drop-shadow-2xl shadow-indigo-50  font-bold">
+            <h3 className=" text-4xl text-center lg:text-start lg:text-7xl text-white leading-tight drop-shadow-2xl shadow-indigo-50  font-bold">
               Seamless task management with <span>Swift Precision</span>
             </h3>
 
-            <button className="btn bg-[#2d7bea] hover:bg-[#2d7bea] text-white rounded-full  px-8 text-lg shadow-xl border-none mt-12">
-              {"Let's"} Explore
-            </button>
+            <Link to="/sign-in" >
+              <button className="btn bg-[#2d7bea] hover:bg-[#2d7bea] text-white rounded-full  px-8 text-lg shadow-xl border-none mt-12">
+                {"Let's"} Explore
+              </button>
+            </Link>
           </div>
         </motion.div>
       </div>

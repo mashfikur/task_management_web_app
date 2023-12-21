@@ -1,0 +1,29 @@
+.react-tabs__tab-list {
+  display: flex;
+  justify-content: center;
+  border-bottom: none;
+
+  gap: 1rem;
+  align-items: center;
+}
+
+.react-tabs__tab {
+  border: none;
+  color: gray;
+  border-bottom: none;
+}
+
+.react-tabs__tab:focus {
+  border-bottom: none;
+}
+
+.react-tabs__tab--selected {
+  background-color: #2864f0;
+  color: white;
+  border-bottom: none;
+  border-radius: 25px;
+}
+
+.react-tabs__tab--selected:focus {
+  border-bottom: none;
+}
