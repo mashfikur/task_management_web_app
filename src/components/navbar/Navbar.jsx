@@ -1,10 +1,32 @@
+import { Link } from "react-router-dom";
+import { navLinks } from "./navLinks";
+import navLogo from "../../assets/favicon/android-chrome-512x512.png";
+
 const Navbar = () => {
   return (
     <div>
-      <h3>welcome to navbar</h3>
-      <label htmlFor="my-drawer" className="btn btn-primary drawer-button">
-        Open drawer
-      </label>
+      <div className="navbar container mx-auto bg-base-100">
+        <div className="navbar-start">
+          <div>
+            <label
+              htmlFor="my-drawer"
+              className="btn btn-primary drawer-button lg:hidden"
+            >
+              Open drawer
+            </label>
+          </div>
+          <Link className="text-4xl font-semibold flex items-center gap-2">
+            {" "}
+            <img className="size-[2.5rem]" src={navLogo} alt="" /> SwiftTask
+          </Link>
+        </div>
+        <div className="navbar-center hidden lg:flex">
+          <ul className="flex gap-3"> {navLinks} </ul>
+        </div>
+        <div className="navbar-end">
+          <a className="btn">Sign In</a>
+        </div>
+      </div>
     </div>
   );
 };
