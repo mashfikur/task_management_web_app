@@ -1,10 +1,10 @@
-import cover from "../../assets/images/web-banner.png";
+import cover from "../../assets/images/web-banner.svg";
 
 const Banner = () => {
   return (
-    <div className="flex  items-center">
+    <div className="flex mt-10  items-center">
       <div className="flex-1">
-        <h3 className="text-7xl leading-snug font-bold">
+        <h3 className="text-7xl text-white leading-snug drop-shadow-2xl shadow-indigo-50  font-bold">
           Seamless task management with <span>Swift Precision</span>
         </h3>
 

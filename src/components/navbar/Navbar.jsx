@@ -15,16 +15,21 @@ const Navbar = () => {
               Open drawer
             </label>
           </div>
-          <Link className="text-4xl font-light flex items-center gap-2">
+          <Link className="text-4xl font-orbitron font-semibold  flex items-center gap-3">
             {" "}
-            <img className="size-[2.5rem]" src={navLogo} alt="" /> SwiftTask
+            <img
+              className="size-[2.5rem]"
+              src={navLogo}
+              alt="navigation-logo"
+            />{" "}
+            SwiftTask
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="flex gap-3"> {navLinks} </ul>
+          <ul className="flex gap-6"> {navLinks} </ul>
         </div>
         <div className="navbar-end">
-          <a className="btn btn-neutral rounded-full px-12">Sign In</a>
+          <a className="btn btn-neutral  rounded-full px-12">Sign In</a>
         </div>
       </div>
     </div>
