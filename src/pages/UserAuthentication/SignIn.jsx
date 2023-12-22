@@ -1,7 +1,12 @@
 import { useForm } from "react-hook-form";
 import { FcGoogle } from "react-icons/fc";
+import useAuth from "../../hooks/useAuth";
+import toast from "react-hot-toast";
+import { useNavigate } from "react-router-dom";
 
 const SignIn = () => {
+  const { userSignIn, setLoading } = useAuth();
+  const navigate = useNavigate();
   const {
     register,
     handleSubmit,
@@ -10,6 +15,15 @@ const SignIn = () => {
 
   const onSubmit = (data) => {
     console.log(data);
+    userSignIn(data.email, data.password)
+      .then(() => {
+        toast.success("Signed In Successfully");
+        navigate("/");
+      })
+      .catch((err) => {
+        toast.error(err.message);
+        setLoading(false);
+      });
   };
 
   return (

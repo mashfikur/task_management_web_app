@@ -1,7 +1,14 @@
 import { useForm } from "react-hook-form";
 import { FcGoogle } from "react-icons/fc";
+import useAuth from "../../hooks/useAuth";
+import toast from "react-hot-toast";
+import { useNavigate } from "react-router-dom";
+import { updateProfile } from "firebase/auth";
 
 const Register = () => {
+  const { createUser, setUser, user, setLoading } = useAuth();
+  const navigate = useNavigate();
+
   const {
     register,
     handleSubmit,
@@ -10,6 +17,21 @@ const Register = () => {
 
   const onSubmit = (data) => {
     console.log(data);
+
+    createUser(data.email, data.password)
+      .then((result) => {
+        toast.success("Created Account Successfully");
+        updateProfile(result.user, {
+          displayName: data.name,
+        }).then(() => {
+          navigate("/");
+          setUser({ ...user, displayName: data.name, email: data.email });
+        });
+      })
+      .catch((err) => {
+        toast.error(err.message);
+        setLoading(false);
+      });
   };
 
   return (
@@ -35,7 +57,6 @@ const Register = () => {
             type="text"
             placeholder="photoURL"
             className="input input-bordered focus:outline-none"
-            required
             {...register("photo")}
           />
         </div>
