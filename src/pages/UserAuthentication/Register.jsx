@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 import { updateProfile } from "firebase/auth";
 
 const Register = () => {
-  const { createUser, setUser, user, setLoading } = useAuth();
+  const { createUser, setUser, user, setLoading, googleUserAuth } = useAuth();
   const navigate = useNavigate();
 
   const {
@@ -30,6 +30,19 @@ const Register = () => {
       })
       .catch((err) => {
         toast.error(err.message);
+        setLoading(false);
+      });
+  };
+
+  // google sign up
+  const handleGoogleSignIn = () => {
+    googleUserAuth()
+      .then(() => {
+        toast.success("Signed Up Successfully");
+        navigate("/dashboard");
+      })
+      .catch((err) => {
+        toast.error(err.code);
         setLoading(false);
       });
   };
@@ -92,7 +105,10 @@ const Register = () => {
         <div className="divider">OR</div>
       </form>
       <div className="flex flex-col items-center justify-center gap-2 -mt-6 mb-4">
-        <button className="btn btn-neutral w-[20rem] mx-auto rounded-full  text-white">
+        <button
+          onClick={handleGoogleSignIn}
+          className="btn btn-neutral w-[20rem] mx-auto rounded-full  text-white"
+        >
           Sign Up With Google
           <FcGoogle className="text-xl" />
         </button>

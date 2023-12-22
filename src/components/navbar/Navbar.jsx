@@ -65,7 +65,7 @@ const Navbar = () => {
                 </div>
                 <ul
                   tabIndex={0}
-                  className=" dropdown-content  z-[1] menu p-2 shadow bg-blue-600 rounded-box w-52 text-lg font-semibold space-y-4 text-center"
+                  className=" dropdown-content  z-[1] menu p-2 shadow bg-blue-600 rounded-box  text-lg font-semibold space-y-4 text-center"
                 >
                   <li className="text-2xl">{user.displayName}</li>
                   <li className="bg-white px-4 py-2 rounded-full text-blue-700">

@@ -5,7 +5,7 @@ import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 
 const SignIn = () => {
-  const { userSignIn, setLoading } = useAuth();
+  const { userSignIn, setLoading, googleUserAuth } = useAuth();
   const navigate = useNavigate();
   const {
     register,
@@ -22,6 +22,19 @@ const SignIn = () => {
       })
       .catch((err) => {
         toast.error(err.message);
+        setLoading(false);
+      });
+  };
+
+  // google sign up
+  const handleGoogleSignIn = () => {
+    googleUserAuth()
+      .then(() => {
+        toast.success("Signed in Successfully");
+        navigate("/dashboard");
+      })
+      .catch((err) => {
+        toast.error(err.code);
         setLoading(false);
       });
   };
@@ -62,7 +75,10 @@ const SignIn = () => {
       </form>
 
       <div className="flex flex-col items-center justify-center gap-2 -mt-6 mb-4">
-        <button className="btn btn-neutral w-[20rem] mx-auto rounded-full  text-white">
+        <button
+          onClick={handleGoogleSignIn}
+          className="btn btn-neutral w-[20rem] mx-auto rounded-full  text-white"
+        >
           Sign In With Google
           <FcGoogle className="text-xl" />
         </button>
