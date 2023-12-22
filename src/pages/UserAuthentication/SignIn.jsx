@@ -1,4 +1,5 @@
 import { useForm } from "react-hook-form";
+import { FcGoogle } from "react-icons/fc";
 
 const SignIn = () => {
   const {
@@ -8,12 +9,11 @@ const SignIn = () => {
   } = useForm();
 
   const onSubmit = (data) => {
-    console.log(data)
-  }
-
+    console.log(data);
+  };
 
   return (
-    <div className="card   shadow-2xl bg-base-100 ">
+    <div className="card shadow-2xl bg-base-100 ">
       <form onSubmit={handleSubmit(onSubmit)} className="card-body">
         <div className="form-control">
           <label className="label">
@@ -38,16 +38,21 @@ const SignIn = () => {
             required
             {...register("password")}
           />
-          <label className="label">
-            <a href="#" className="label-text-alt link link-hover">
-              Forgot password?
-            </a>
-          </label>
         </div>
         <div className="form-control mt-6">
-          <button className="btn btn-primary">Sign In</button>
+          <button className="btn bg-[#2864EF] w-[20rem] mx-auto rounded-full hover:bg-[#2864EF] text-white">
+            Sign In
+          </button>
         </div>
+        <div className="divider">OR</div>
       </form>
+
+      <div className="flex flex-col items-center justify-center gap-2 -mt-6 mb-4">
+        <button className="btn btn-neutral w-[20rem] mx-auto rounded-full  text-white">
+          Sign In With Google
+          <FcGoogle className="text-xl" />
+        </button>
+      </div>
     </div>
   );
 };

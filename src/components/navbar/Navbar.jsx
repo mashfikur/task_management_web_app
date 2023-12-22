@@ -22,7 +22,7 @@ const Navbar = () => {
           <ul className="flex gap-6"> {navLinks} </ul>
         </div>
         <div className="navbar-end ">
-          <a className="btn text-white border-none rounded-xl px-6 bg-[#2d7bea] hover:bg-[#2d7bea] hidden lg:flex">
+          <a className="btn text-white border-none rounded-xl px-6 bg-[#2864EF] hover:bg-[#2864EF] hidden lg:flex">
             Sign In
           </a>
         </div>

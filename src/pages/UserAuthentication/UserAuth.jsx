@@ -4,16 +4,19 @@ import "./styles.css";
 import SignIn from "./SignIn";
 import Register from "./Register";
 
+import banner from "../../assets/images/auth-banner.svg";
+
 const UserAuth = () => {
   return (
     <div>
       <div>
-        <div className="bg-base-200 min-h-[80vh] rounded-xl p-24">
-          <div className="flex flex-col gap-12 lg:flex-row">
+        <div className="bg-base-100 h-[85vh] rounded-xl px-24 py-16">
+          <div className="flex flex-col gap-12  lg:flex-row ">
             <div className="text-center flex-1 lg:text-left">
-              <h3 className="text-center text-5xl text-black font-semibold mt-12 ">
+              <h3 className="text-center drop-shadow-2xl text-5xl text-black font-semibold  ">
                 Explore With SwiftTask
               </h3>
+              <img className="w-[80%] " src={banner} alt="" />
             </div>
             <div className="flex-1">
               {/* tabs */}
