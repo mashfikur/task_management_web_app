@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { navLinks } from "./navLinks";
 import navLogo from "../../assets/favicon/android-chrome-512x512.png";
 import { MdOutlineMenu } from "react-icons/md";
@@ -34,7 +34,21 @@ const Navbar = () => {
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="flex gap-6"> {navLinks} </ul>
+          <ul className="flex gap-6">
+            {loading ? (
+              ""
+            ) : user ? (
+              <>
+                {" "}
+                {navLinks}{" "}
+                <li>
+                  <NavLink to="/dashboard">Dashboard</NavLink>
+                </li>{" "}
+              </>
+            ) : (
+              navLinks
+            )}
+          </ul>
         </div>
         <div className="navbar-end ">
           {loading ? (

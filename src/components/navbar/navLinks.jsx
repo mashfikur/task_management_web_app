@@ -6,13 +6,13 @@ export const navLinks = (
       <NavLink to="/">Home</NavLink>
     </li>
     <li>
-      <NavLink to="/demo">About</NavLink>
+      <NavLink to="/">About</NavLink>
     </li>
     <li>
-      <NavLink to="/demo">Pricing</NavLink>
+      <NavLink to="/">Pricing</NavLink>
     </li>
     <li>
-      <NavLink to="/demo">Calendar</NavLink>
+      <NavLink to="/">Calendar</NavLink>
     </li>
   </>
 );

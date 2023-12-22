@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import { navLinks } from "../navbar/navLinks";
+import { NavLink } from "react-router-dom";
 
 const Drawer = ({ children }) => {
   return (
@@ -15,6 +16,9 @@ const Drawer = ({ children }) => {
           ></label>
           <ul className="menu p-4 pt-12 w-80 min-h-full bg-base-200 text-lg">
             {navLinks}
+            <li>
+              <NavLink to="/dashboard">Dashboard</NavLink>
+            </li>{" "}
           </ul>
         </div>
       </div>
