@@ -15,7 +15,7 @@ const Dashboard = () => {
           </div>
           <div className="w-[80%] ">
             <Drawer>
-              <div className="bg-white min-h-[80vh] overflow-y-auto rounded-xl p-3">
+              <div className="bg-white h-[80vh] overflow-y-auto rounded-xl p-3">
                 <Outlet></Outlet>
               </div>
             </Drawer>

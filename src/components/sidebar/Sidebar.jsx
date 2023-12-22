@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Sidebar = () => {
   return (
@@ -6,15 +6,30 @@ const Sidebar = () => {
       <div className="mt-20">
         <ul className="space-y-4 text-lg font-semibold">
           <li>
-            <Link to="/dashboard">Dashboard</Link>
+            <NavLink
+              className={(isActive) => (isActive ? "sideLink" : "")}
+              to="/dashboard"
+            >
+              Dashboard
+            </NavLink>
             <hr />
           </li>
           <li>
-            <Link>My Tasks</Link>
+            <NavLink
+              to="/dashboard/my-tasks"
+              className={(isActive) => (isActive ? "sideLink" : "")}
+            >
+              My Tasks
+            </NavLink>
             <hr />
           </li>
           <li>
-            <Link>Add Task</Link>
+            <NavLink
+              className={(isActive) => (isActive ? "sideLink" : "")}
+              to="/dashboard/add-task"
+            >
+              Add Task
+            </NavLink>
             <hr />
           </li>
         </ul>
