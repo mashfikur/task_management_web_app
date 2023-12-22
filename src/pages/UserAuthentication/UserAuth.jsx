@@ -9,14 +9,18 @@ import banner from "../../assets/images/auth-banner.svg";
 const UserAuth = () => {
   return (
     <div>
-      <div>
-        <div className="bg-base-100 h-[85vh] rounded-xl px-24 py-16">
-          <div className="flex flex-col gap-12  lg:flex-row ">
-            <div className="text-center flex-1 lg:text-left">
-              <h3 className="text-center drop-shadow-2xl text-5xl text-black font-semibold  ">
+      <div className="px-2 pb-12">
+        <div className="bg-base-100 h-screen xl:h-[85vh]  rounded-xl lg:px-24 py-16">
+          <div className="flex flex-col-reverse gap-12 lg:-mt-10 xl:-mt-0  lg:flex-row ">
+            <div className="text-center hidden lg:block flex-1 lg:text-left">
+              <h3 className="text-center test drop-shadow-2xl text-5xl text-black font-semibold  ">
                 Explore With SwiftTask
               </h3>
-              <img className="w-[80%] " src={banner} alt="" />
+              <img
+                className="xl:w-[80%] mx-auto lg:mx-0 "
+                src={banner}
+                alt=""
+              />
             </div>
             <div className="flex-1">
               {/* tabs */}
