@@ -6,6 +6,7 @@ import Dashboard from "../pages/Dashboard/Dashboard";
 import PrivateRoute from "./PrivateRoute";
 import DashBoardHome from "../pages/Dashboard/DashBoardHome";
 import AddTask from "../pages/Dashboard/AddTask";
+import MyTasks from "../pages/Dashboard/MyTasks";
 
 const router = createBrowserRouter([
   {
@@ -43,6 +44,14 @@ const router = createBrowserRouter([
         element: (
           <PrivateRoute>
             <AddTask></AddTask>
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/dashboard/my-tasks",
+        element: (
+          <PrivateRoute>
+            <MyTasks></MyTasks>
           </PrivateRoute>
         ),
       },

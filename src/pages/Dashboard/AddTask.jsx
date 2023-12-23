@@ -26,7 +26,7 @@ const AddTask = () => {
     const milliseconds = dateObject.getTime();
     const taskInfo = {
       ...data,
-      date: milliseconds,
+      deadline: milliseconds,
       priority: data.priority.value,
       userid: user.uid,
       status: "todo",

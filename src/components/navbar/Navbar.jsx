@@ -58,8 +58,8 @@ const Navbar = () => {
               <div className="dropdown dropdown-bottom dropdown-end">
                 <div tabIndex={0} role="button" className=" m-1">
                   <img
-                    className="size-[1.5rem]"
-                    src={defaultUser}
+                    className="size-[2.5rem] rounded-full"
+                    src={user.photoURL ? user.photoURL : defaultUser}
                     alt="default-user"
                   />
                 </div>
