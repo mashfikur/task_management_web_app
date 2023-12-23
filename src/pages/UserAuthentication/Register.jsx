@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 import { updateProfile } from "firebase/auth";
 
 const Register = () => {
-  const { createUser, setUser, user, setLoading, googleUserAuth } = useAuth();
+  const { createUser, setUser, setLoading, googleUserAuth } = useAuth();
   const navigate = useNavigate();
 
   const {
@@ -27,7 +27,7 @@ const Register = () => {
         }).then(() => {
           navigate("/");
           setUser({
-            ...user,
+            ...result.user,
             displayName: data.name,
             email: data.email,
             photoURL: data.photo,

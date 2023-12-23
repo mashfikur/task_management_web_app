@@ -25,7 +25,7 @@ const TaskSection = ({ section, query, statusUpdated, setStatusUpdated }) => {
 
   if (statusUpdated) {
     refetch();
-    //es-lint
+    //es-lint-disable-next-line
     setStatusUpdated(false);
   }
 
@@ -37,7 +37,7 @@ const TaskSection = ({ section, query, statusUpdated, setStatusUpdated }) => {
         <Droppable droppableId={query}>
           {(provided) => (
             <div
-              className=" "
+              className=" h-[68vh] overflow-auto "
               ref={provided.innerRef}
               {...provided.droppableProps}
             >
@@ -46,7 +46,7 @@ const TaskSection = ({ section, query, statusUpdated, setStatusUpdated }) => {
               {data && (
                 <div className="flex flex-col gap-4 mt-4">
                   {data.map((task, idx) => (
-                    <Item task={task} key={idx} id={idx}></Item>
+                    <Item task={task} refetch={refetch} key={idx} id={idx}></Item>
                   ))}
                 </div>
               )}

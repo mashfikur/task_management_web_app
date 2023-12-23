@@ -12,7 +12,7 @@ export const navLinks = (
       <NavLink to="/">Pricing</NavLink>
     </li>
     <li>
-      <NavLink to="/">Calendar</NavLink>
+      <NavLink to="/">Download</NavLink>
     </li>
   </>
 );

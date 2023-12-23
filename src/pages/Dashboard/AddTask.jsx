@@ -10,6 +10,7 @@ import toast from "react-hot-toast";
 const AddTask = () => {
   const axiosSecure = useAxiosSecure();
   const { user } = useAuth();
+  console.log(user.uid)
   const [startDate, setStartDate] = useState(new Date());
 
   const { register, handleSubmit, control, reset } = useForm();
