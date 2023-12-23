@@ -23,9 +23,15 @@ const Register = () => {
         toast.success("Created Account Successfully");
         updateProfile(result.user, {
           displayName: data.name,
+          photoURL: data.photo,
         }).then(() => {
           navigate("/");
-          setUser({ ...user, displayName: data.name, email: data.email });
+          setUser({
+            ...user,
+            displayName: data.name,
+            email: data.email,
+            photoURL: data.photo,
+          });
         });
       })
       .catch((err) => {
@@ -67,6 +73,7 @@ const Register = () => {
             <span className="label-text">Photo</span>
           </label>
           <input
+            required
             type="text"
             placeholder="photoURL"
             className="input input-bordered focus:outline-none"
