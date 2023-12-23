@@ -26,25 +26,27 @@ const Todo = () => {
     <div>
       <h3 className="font-semibold text-3xl">To-Do</h3>
 
-      <Droppable droppableId="to-do">
-        {(provided) => (
-          <div
-            className=" "
-            ref={provided.innerRef}
-            {...provided.droppableProps}
-          >
-            {provided.placeholder}
+      {data && (
+        <Droppable droppableId="to-do">
+          {(provided) => (
+            <div
+              className=" "
+              ref={provided.innerRef}
+              {...provided.droppableProps}
+            >
+              {provided.placeholder}
 
-            {data && (
-              <div className="flex flex-col gap-4">
-                {data.map((task, idx) => (
-                  <Item task={task} key={idx} id={idx}></Item>
-                ))}
-              </div>
-            )}
-          </div>
-        )}
-      </Droppable>
+              {data && (
+                <div className="flex flex-col gap-4 mt-4">
+                  {data.map((task, idx) => (
+                    <Item task={task} key={idx} id={idx}></Item>
+                  ))}
+                </div>
+              )}
+            </div>
+          )}
+        </Droppable>
+      )}
     </div>
   );
 };
