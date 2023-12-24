@@ -5,11 +5,11 @@ import { motion } from "framer-motion";
 const Banner = () => {
   return (
     <div className="flex mt-4 lg:flex-row flex-col gap-6  items-center px-4 my-4 ">
-      <div className="flex-1" >
+      <div className="flex-1">
         <motion.div
-          initial={{ translateX: -350 }}
-          whileInView={{ translateX: 0 }}
-          transition={{ duration: 0.5 }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 2 }}
         >
           <div className="flex flex-col items-center lg:items-start">
             <h3
@@ -29,9 +29,9 @@ const Banner = () => {
       </div>
       <div className="flex-1">
         <motion.div
-          initial={{ translateX: 350 }}
-          whileInView={{ translateX: 0 }}
-          transition={{ duration: 0.5 }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 2 }}
         >
           <img
             src={cover}
