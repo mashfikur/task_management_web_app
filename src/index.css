@@ -21,6 +21,22 @@ body {
   min-height: 100vh;
 }
 
+.error-bg {
+  background-color: rgb(15, 23, 42);
+  background-image: radial-gradient(
+      at 84% 25%,
+      rgb(24, 24, 27) 0,
+      transparent 18%
+    ),
+    radial-gradient(at 14% 69%, rgb(2, 132, 199) 0, transparent 54%),
+    radial-gradient(at 99% 74%, rgb(217, 70, 239) 0, transparent 13%),
+    radial-gradient(at 63% 31%, rgb(24, 24, 27) 0, transparent 7%),
+    radial-gradient(at 57% 33%, rgb(245, 208, 254) 0, transparent 20%),
+    radial-gradient(at 100% 51%, rgb(252, 165, 165) 0, transparent 52%);
+
+  background-size: cover;
+  background-position: center;
+}
 
 /* .sideLink {
   color: black;

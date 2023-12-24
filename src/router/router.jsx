@@ -7,11 +7,13 @@ import PrivateRoute from "./PrivateRoute";
 import DashBoardHome from "../pages/Dashboard/DashBoardHome";
 import AddTask from "../pages/Dashboard/AddTask";
 import MyTasks from "../pages/Dashboard/MyTasks";
+import ErrorPage from "../pages/Error/ErrorPage";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Layout></Layout>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: "/",
