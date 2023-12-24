@@ -12,6 +12,7 @@ import Select from "react-select";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { IoCloseCircle } from "react-icons/io5";
+import moment from "moment";
 
 const Item = ({ task, id, refetch }) => {
   const axiosSecure = useAxiosSecure();
@@ -100,13 +101,13 @@ const Item = ({ task, id, refetch }) => {
               >
                 {task.priority}
               </div>{" "}
-              <h3 className="text-xs flex items-center font-bold text-gray-400 ">
+              <h3 className="text-xs flex gap-1 items-center font-bold text-gray-400 ">
                 <TbCalendarDue className="text-xs" />
-                {new Date(task.deadline).toLocaleDateString()}{" "}
+                {moment(task.deadline).format("MMM Do , YYYY")}
               </h3>
             </div>
             <div className="flex justify-between gap-4 items-center">
-              <h3 className="capitalize text-xl  font-bold "> {task.task} </h3>
+              <h3 className="capitalize text-xl  font-bold "> {task.task}</h3>
             </div>
             <div className="text-lg flex items-center justify-between">
               {" "}
@@ -158,7 +159,7 @@ const Item = ({ task, id, refetch }) => {
                           {...field}
                           className="border-2 border-[#D2D4D7] w-full rounded-lg "
                           showIcon
-                          selected={task.deadline}
+                          selected={startDate}
                           minDate={new Date()}
                           onChange={(date) => {
                             field.onChange(date);

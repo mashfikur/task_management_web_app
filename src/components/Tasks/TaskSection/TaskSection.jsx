@@ -11,7 +11,7 @@ const TaskSection = ({ section, query, statusUpdated, setStatusUpdated }) => {
 
   const axiosSecure = useAxiosSecure();
 
-  const { data, refetch, isPending } = useQuery({
+  const { data, refetch, isPending, isFetching, isError } = useQuery({
     queryKey: [query, statusUpdated],
     queryFn: async () => {
       if (user) {
@@ -50,10 +50,12 @@ const TaskSection = ({ section, query, statusUpdated, setStatusUpdated }) => {
               >
                 {provided.placeholder}
 
-                {isPending ? (
+                {isFetching ? (
                   <div>
                     <span className="loading loading-dots loading-lg"></span>
                   </div>
+                ) : isError ? (
+                  <div>Error fetching data</div>
                 ) : (
                   data && (
                     <div className="flex flex-col gap-4 mt-4">
