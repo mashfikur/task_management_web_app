@@ -6,8 +6,8 @@ import defaultUser from "../../assets/images/user.png";
 const Sidebar = () => {
   const { user } = useAuth();
   return (
-    <div className="h-[80vh] rounded-xl bg-[#1c47ad] shadow-2xl text-white p-3">
-      <h3 className="text-center mt-10 font-semibold text-3xl">
+    <div className="lg:h-[80vh] rounded-xl bg-[#1c47ad] shadow-2xl text-white px-3 py-1">
+      <h3 className="text-center mt-10 font-semibold text-3xl p-4">
         {" "}
         {moment().format("MMM Do , YYYY")}{" "}
       </h3>
@@ -22,31 +22,27 @@ const Sidebar = () => {
             />
           </li>
           <li>
-            <NavLink
-              className={(isActive) => (isActive ? "sideLink" : "")}
-              to="/dashboard"
-            >
-              Dashboard
-            </NavLink>
-            <hr />
+            <NavLink to="/dashboard">Dashboard</NavLink>
           </li>
           <li>
             <NavLink
               to="/dashboard/my-tasks"
-              className={(isActive) => (isActive ? "sideLink" : "")}
+              className={({ isActive, isPending }) =>
+                isActive ? "sideLink" : isPending ? "pending" : ""
+              }
             >
               My Tasks
             </NavLink>
-            <hr />
           </li>
           <li>
             <NavLink
-              className={(isActive) => (isActive ? "sideLink" : "")}
+              className={({ isActive, isPending }) =>
+                isActive ? "sideLink" : isPending ? "pending" : ""
+              }
               to="/dashboard/add-task"
             >
               Add Task
             </NavLink>
-            <hr />
           </li>
         </ul>
       </div>

@@ -9,11 +9,11 @@ const Dashboard = () => {
     <div className="main">
       <div className="min-h-screen">
         <Navbar></Navbar>
-        <div className="container mx-auto flex gap-8">
-          <div className="w-[20%] ">
+        <div className="container mx-auto flex lg:flex-row flex-col gap-8 px-3 mb-6">
+          <div className="lg:w-[20%]  ">
             <Sidebar></Sidebar>
           </div>
-          <div className="w-[80%]">
+          <div className="lg:w-[80%]">
             <Drawer>
               <div className="bg-white xl:h-[80vh]  rounded-xl p-3">
                 <Outlet></Outlet>

@@ -38,9 +38,9 @@ body {
   background-position: center;
 }
 
-/* .sideLink {
-  color: black;
-} */
+.sideLink {
+  border-bottom: 2px solid;
+}
 
 @media only screen and (min-width: 1020px) {
   body {

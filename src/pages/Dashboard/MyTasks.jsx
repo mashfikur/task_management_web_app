@@ -4,7 +4,7 @@ import useAxiosSecure from "../../hooks/useAxiosSecure";
 import toast from "react-hot-toast";
 import { useState } from "react";
 
-const common = "rounded-xl p-2";
+const common = "rounded-xl p-2 xl:h-[75vh] overflow-auto text-white";
 
 const MyTasks = () => {
   const axiosSecure = useAxiosSecure();
@@ -42,10 +42,8 @@ const MyTasks = () => {
   return (
     <DragDropContext onDragEnd={onDragEnd}>
       <div>
-        <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-4 h-[75vh] mt-2 ">
-          <div
-            className={`${common} bg-neutral text-white h-[75vh] overflow-auto `}
-          >
+        <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-4 xl:h-[75vh]  ">
+          <div className={`${common} bg-neutral  `}>
             <TaskSection
               statusUpdated={statusUpdated}
               setStatusUpdated={setStatusUpdated}
@@ -53,9 +51,7 @@ const MyTasks = () => {
               query={"todo"}
             ></TaskSection>
           </div>
-          <div
-            className={`${common} bg-yellow-500 text-white h-[75vh] overflow-auto`}
-          >
+          <div className={`${common} bg-yellow-500  `}>
             <TaskSection
               statusUpdated={statusUpdated}
               setStatusUpdated={setStatusUpdated}
@@ -63,7 +59,7 @@ const MyTasks = () => {
               query={"ongoing"}
             ></TaskSection>
           </div>
-          <div className={`${common}  text-white bg-[#12A150]`}>
+          <div className={`${common}   bg-[#12A150]`}>
             {" "}
             <TaskSection
               statusUpdated={statusUpdated}

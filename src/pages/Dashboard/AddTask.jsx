@@ -10,7 +10,7 @@ import toast from "react-hot-toast";
 const AddTask = () => {
   const axiosSecure = useAxiosSecure();
   const { user } = useAuth();
-  console.log(user.uid)
+  console.log(user.uid);
   const [startDate, setStartDate] = useState(new Date());
 
   const { register, handleSubmit, control, reset } = useForm();
@@ -50,8 +50,8 @@ const AddTask = () => {
 
   return (
     <div>
-      <div className="hero">
-        <div className="flex flex-col w-[60%] gap-4 mt-4">
+      <div className="">
+        <div className="flex flex-col lg:w-[60%] gap-4 mt-4 mx-auto">
           <div className="text-center lg:text-left">
             <h1 className="text-5xl font-bold text-center">Add Task</h1>
           </div>

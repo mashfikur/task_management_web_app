@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const Banner = () => {
   return (
-    <div className="flex mt-10 lg:flex-row flex-col gap-6  items-center">
+    <div className="flex mt-4 lg:flex-row flex-col gap-6  items-center px-4 my-4 ">
       <div className="flex-1" >
         <motion.div
           initial={{ translateX: -350 }}

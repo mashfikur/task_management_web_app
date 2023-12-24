@@ -50,7 +50,7 @@ const Navbar = () => {
             )}
           </ul>
         </div>
-        <div className="navbar-end ">
+        <div className="navbar-end   lg:w-[30%] xl:w-[40%]">
           {loading ? (
             <span className="loading loading-lg loading-spinner text-info"></span>
           ) : user ? (
