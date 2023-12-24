@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import { FaCheck } from "react-icons/fa";
+import { IoCheckmarkDoneSharp } from "react-icons/io5";
 import { BsStars } from "react-icons/bs";
 import { Link } from "react-router-dom";
 
@@ -14,9 +14,10 @@ const Card = ({ info: data }) => {
             <hr className="border-b-2 border-blue-400 w-[60%]" />
             <div className="space-y-2">
               {info.features.map((feature, idx) => (
-                <h4 key={idx} className="flex gap-2 items-center">
+                <h4 key={idx} className="flex gap-2 ">
                   {" "}
-                  <FaCheck className="text-base text-success" /> {feature}
+                  <IoCheckmarkDoneSharp className="text-xl text-success" />{" "}
+                  {feature}
                 </h4>
               ))}
             </div>
