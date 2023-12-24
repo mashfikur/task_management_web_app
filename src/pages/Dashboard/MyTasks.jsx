@@ -42,7 +42,7 @@ const MyTasks = () => {
   return (
     <DragDropContext onDragEnd={onDragEnd}>
       <div>
-        <div className="grid grid-cols-3 gap-4 h-[75vh] mt-2 overflow-y-auto ">
+        <div className="grid grid-cols-3 gap-4 h-[75vh] mt-2 ">
           <div
             className={`${common} bg-neutral text-white h-[75vh] overflow-auto `}
           >
