@@ -1,0 +1,81 @@
+
+[
+  {
+    "intro": "For Developers",
+    "info": [
+      {
+        "main": "Task Management by Projects",
+        "features": [
+          "Organize tasks based on different coding projects",
+          "Easily switch between projects to focus on specific development tasks"
+        ]
+      },
+      {
+        "main": "Integration with Version Control Systems",
+        "features": [
+          "Connect the todo app with popular version control systems like Git",
+          "Automatically link tasks to specific branches or issues in the repository"
+        ]
+      },
+      {
+        "main": "Code Review Tasks",
+        "features": [
+          "Create tasks related to code review",
+          "Attach code snippets, comments, or links directly to the task"
+        ]
+      }
+    ]
+  },
+  {
+    "intro": "For Corporations",
+    "info": [
+      {
+        "main": "Project and Team Collaboration",
+        "features": [
+          "Collaborate on tasks with colleagues and team members",
+          "Share project-specific tasks for seamless collaboration"
+        ]
+      },
+      {
+        "main": "Meeting Preparation",
+        "features": [
+          "Create tasks to prepare for meetings",
+          "Attach meeting agendas, documents, and relevant information"
+        ]
+      },
+      {
+        "main": "Task Delegation and Tracking",
+        "features": [
+          "Easily delegate tasks to team members",
+          "Track the progress of delegated tasks and receive updates"
+        ]
+      }
+    ]
+  },
+  {
+    "intro": "For Bankers",
+    "info": [
+      {
+        "main": "Financial Task Management",
+        "features": [
+          "Organize tasks related to financial transactions and projects",
+          "Set reminders for critical financial deadlines"
+        ]
+      },
+      {
+        "main": "Regulatory Compliance Tasks",
+        "features": [
+          "Manage tasks related to regulatory compliance and reporting",
+          "Attach documents and compliance guidelines to tasks"
+        ]
+      },
+      {
+        "main": "Risk Assessment and Mitigation",
+        "features": [
+          "Use tasks to manage risk assessments and mitigation strategies",
+          "Attach relevant risk analysis documents and reports"
+        ]
+      }
+    ]
+  }
+]

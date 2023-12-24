@@ -1,4 +1,4 @@
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import { navLinks } from "./navLinks";
 import navLogo from "../../assets/favicon/android-chrome-512x512.png";
 import { MdOutlineMenu } from "react-icons/md";
@@ -8,11 +8,13 @@ import toast from "react-hot-toast";
 
 const Navbar = () => {
   const { user, loading, userSignOut } = useAuth();
+  const navigate = useNavigate();
 
   const handleSignOut = () => {
     userSignOut()
       .then(() => {
         toast.success("Logged Out Successfully");
+        navigate("/");
       })
       .catch((err) => {
         toast.error(err.message);
@@ -55,7 +57,7 @@ const Navbar = () => {
             <span className="loading loading-lg loading-spinner text-info"></span>
           ) : user ? (
             <div>
-              <div className="dropdown dropdown-bottom dropdown-end">
+              <div className="dropdown dropdown-bottom  dropdown-end">
                 <div tabIndex={0} role="button" className=" m-1">
                   <img
                     className="size-[2.5rem] rounded-full"
@@ -65,7 +67,7 @@ const Navbar = () => {
                 </div>
                 <ul
                   tabIndex={0}
-                  className=" dropdown-content  z-[1] menu p-2 shadow bg-blue-600 rounded-box  text-lg font-semibold space-y-4 text-center"
+                  className=" dropdown-content  z-[1] menu p-2 shadow bg-blue-600 rounded-box  lg:text-lg font-semibold space-y-4 text-center"
                 >
                   <li className="text-2xl">{user.displayName}</li>
                   <li className="bg-white px-4 py-2 rounded-full text-blue-700">
